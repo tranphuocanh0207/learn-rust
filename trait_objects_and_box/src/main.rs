@@ -23,7 +23,7 @@ fn main() {
     let b: Box<dyn Clicky> = Box::new(Mouse);
     println!("{}", b.click());
 
-    let vec = vec![a,b];
+    let vec: Vec<Box<dyn Clicky>> = vec![a,b];
 
     for i in vec.iter() { 
         println!("{}", i.click());
